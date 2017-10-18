@@ -257,22 +257,27 @@ dt {
 .principal-social-media {
   width: 50%;
   display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
   position: absolute;
   top: 90%;
   margin-left: 50px;
 }
 
+.principal-social-media .icon-linkedin {
+  stroke-width: 17px;
+}
+
 .principal-social-media svg {
-  padding: 5px;
-  width: 50px;
+  stroke: #f7f7f7;
+  stroke-width: 8px;
+  width: 5%;
+  margin: 5px;
   -webkit-transition: all 200ms ease-in;
   transition: all 200ms ease-in;
 }
 
 .principal-social-media svg:hover {
-  width: 60px;
+  width: 6%;
+  stroke: #ecb7b8;
 }
 
 .l-content {
@@ -369,17 +374,30 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 30% 2% 0 0;
+}
+
+nav .line-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 30% 2% 0 0;
-  text-align: left;
+  width: 10%;
 }
 
-nav a {
+nav .line-links a {
   margin: 6px;
-  width: 5%;
+  width: 50%;
   height: 6px;
   border-radius: 5px;
   background-color: #28b5a9;
@@ -390,26 +408,39 @@ nav a {
   text-align: left;
 }
 
-nav a:hover {
-  width: 10%;
+nav .line-links a:hover {
+  width: 80%;
   height: 7px;
   background-color: #ecb7b8;
   -webkit-transition: all 200ms ease-in;
   transition: all 200ms ease-in;
 }
 
-nav p {
-  color: #28b5a9;
-  text-align: right;
-  position: absolute;
-  right: 8%;
-  top: 53.5%;
-  margin: 0;
-  padding: 0;
+nav .words-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-nav p:hover {
-  color: #ecb7b8;
-  right: 12%;
-  top: 53.5%;
+nav .words-links .links {
+  margin: 0;
+  color: #28b5a9;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  text-decoration: none;
+  color: #28b5a9;
+  font-size: 12px;
+  visibility: hidden;
+}
+
+nav .words-links .visible {
+  visibility: visible;
+}
+
+nav .words-links .hidden {
+  visibility: hidden;
 }

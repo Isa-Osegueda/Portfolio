@@ -1,44 +1,56 @@
 nav {
     display: flex;
-    flex-direction: column; 
+    flex-direction: row;
+    justify-content: flex-end;
     padding: 30% 2% 0 0;
-    text-align: left;
 
-    a {
-        margin: 6px;
-        width: 5%;
-        height: 6px;
-        border-radius: 5px;
-        background-color: $color-contrast;
-        align-self: flex-end;
-        -webkit-transition: all 200ms ease-in;
-        -ms-transition: all 200ms ease-in;
-        -moz-transition: all 200ms ease-in;
-        transition: all 200ms ease-in;
-        text-align: left;
+
+    .line-links {
+        display: flex;
+        flex-direction: column; 
+        width: 10%;   
+
+        a {
+            margin: 6px;
+            width: 50%;
+            height: 6px;
+            border-radius: 5px;
+            background-color: $color-contrast;
+            align-self: flex-end;
+            -webkit-transition: all 200ms ease-in;
+            -ms-transition: all 200ms ease-in;
+            -moz-transition: all 200ms ease-in;
+            transition: all 200ms ease-in;
+            text-align: left;
+        }
+
+        a:hover {
+            width: 80%;
+            height: 7px;
+            background-color: $color-hover;
+            transition: all 200ms ease-in;
+        }
     }
 
-    a:hover {
-        width: 10%;
-        height: 7px;
-        background-color: $color-hover;
-        transition: all 200ms ease-in;
-    }
+    .words-links {
+        display: flex;
+        flex-direction: column; 
 
-    p {
-        color: $color-contrast;
-        text-align: right;
-        position: absolute;
-        right: 8%;
-        top: 53.5%;
-        margin: 0;
-        padding: 0;
-    }
+        .links {
+            margin: 0;
+            color: $color-contrast;
+            align-self: flex-start;
+            text-decoration: none;
+            color: $color-contrast;
+            font-size: 12px;
+            visibility: hidden;
+        }
+        .visible {
+            visibility: visible;
+        }
 
-    p:hover {
-        color: $color-hover;
-        right: 12%;
-        top: 53.5%;
-
+        .hidden {
+            visibility: hidden;
+        }
     }
 }
