@@ -1,0 +1,23 @@
+.principal-social-media {
+    width:50%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 90%;
+    margin-left: 50px; 
+
+    svg {
+        padding: 5px;
+        width: 50px;
+        -webkit-transition: all 200ms ease-in;
+        -ms-transition: all 200ms ease-in;
+        -moz-transition: all 200ms ease-in;
+        transition: all 200ms ease-in;
+           
+    } 
+        svg:hover {
+            width: 60px;
+       
+    }
+}
